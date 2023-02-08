@@ -1,6 +1,6 @@
 # TMC-Super-resolution
 
-Weights for SORTN model (required to run the code) can be downloaded from the following S3 URI link. 
+Pretrained Weights for SORTN model (required to run the code):. 
 
 s3://galaxeye-bucket/SAR-SR/SORTN_best_ckpt.pth
 

@@ -26,8 +26,8 @@ Before running the code, respective directories for the dataset and the director
 
 | Resolution | PSNR | SSIM | 
 | --- | :---: | :---: |
-| 4x |  |  |
-| 16x | 22.2 | 0.702 |
+| 4x | 28.26 | 0.790 |
+| 16x | 22.21 | 0.702 |
 
 
 **Command**:

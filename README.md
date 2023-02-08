@@ -1,6 +1,7 @@
 # TMC-Super-resolution
 
-Pretrained Weights for SORTN model (required to run the code):. 
+Pretrained Weights for Super-Resolution model (SRUN): 
+Pretrained Weights for SORTN model (required to run the code): (https://drive.google.com/file/d/15ImRmGoORsCLSIy4tMJxtbH9NXLXGvVV/view?usp=share_link). 
 
 s3://galaxeye-bucket/SAR-SR/SORTN_best_ckpt.pth
 

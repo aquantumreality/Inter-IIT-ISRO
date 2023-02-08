@@ -21,7 +21,7 @@ BEST_CKPT: 'Gen_Disc_Weights/best_ckpt.pth'
 
 TRAIN:
     NUM_EPOCHS: 200
-    START_FROM_PRETRAINED_WEIGHTS: True
+    START_FROM_PRETRAINED_WEIGHTS: False
     PRETRAINED_WEIGHTS: 'Gen_Disc_Weights/Epoch24.pth'
     
     TRAIN_TEST_SPLIT: 0.8            # Ratio of train dataset to the whole dataset 

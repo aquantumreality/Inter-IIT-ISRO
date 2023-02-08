@@ -7,10 +7,14 @@ Pretrained Weights for SORTN model (required to run the code): (https://drive.go
 ## Train
 Command: 
 ```bash
+!gdown --no-cookies 1oa8qAHleja_HelWXiq24Ombf0UkFSMcB
+
 pip3 install -r requirements.txt
 
 ./run_script.sh train
 ```
+Downloads the dataset required to perform the training. The data is curated from [browse_derived.zip](https://pradan.issdc.gov.in/ch2/protected/downloadFile/tmc2/browse_derived.zip) from Pradan, ISRO.
+
 Installs the required libraries from requirements.txt and runs the train script.
 
 Before running the code, respective directories for the dataset and the directories where the results are to be stored must be given in the config.yaml file. New folders will be created for result directories already if they are not present.

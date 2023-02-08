@@ -88,4 +88,7 @@ $$\mathcal{L}_{SORTN} = \mathcal{L}_{cGAN} + \{100} \mathcal{L}_{1}$$
 
 (the second term represents the L1-loss between optical ground truth and optical generated images)
 
+## References:
+
+OGSRN Paper - [link](https://www.sciencedirect.com/science/article/pii/S1000936121003459)
 

@@ -1,17 +1,16 @@
 # TMC-Super-resolution
 
-Pretrained Weights for Super-Resolution model (SRUN): 
-Pretrained Weights for SORTN model (required to run the code): (https://drive.google.com/file/d/15ImRmGoORsCLSIy4tMJxtbH9NXLXGvVV/view?usp=share_link). 
+Pretrained Weights for Super-Resolution model (SRUN): (https://drive.google.com/file/d/1jDtWT_fbT9O2xmU-Mb5ycEl6ARF0Q5FZ/view?usp=share_link).
 
-s3://galaxeye-bucket/SAR-SR/SORTN_best_ckpt.pth
+Pretrained Weights for SORTN model (required to run the code): (https://drive.google.com/file/d/15ImRmGoORsCLSIy4tMJxtbH9NXLXGvVV/view?usp=share_link). 
 
 ## Train
 Command: 
-
+```bash
 pip3 install -r requirements.txt
 
 ./run_script.sh train
-
+```
 Installs the required libraries from requirements.txt and runs the train script.
 
 Before running the code, respective directories for the dataset and the directories where the results are to be stored must be given in the config.yaml file. New folders will be created for result directories already if they are not present.

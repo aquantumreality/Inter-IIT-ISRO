@@ -9,8 +9,8 @@
 - [Pretrained Weights](#pretrained-weights)
 - [Train](#train)
 - [Validation](#validation)
-- [Test/Inference](#test-inference)
-- [Loss Functions](#loss-functions)
+- [Test/Inference](#testinference)
+- [Loss Functions](#lossfunctions)
 - [References](#references)
 
 [Part 2: Global Lunar Atlas]

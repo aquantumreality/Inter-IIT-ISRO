@@ -15,9 +15,9 @@
 
 ## Pretrained Weights:
 
-Pretrained Weights for Super-Resolution model (SRUN): ![SRUN Weights](https://drive.google.com/file/d/1jDtWT_fbT9O2xmU-Mb5ycEl6ARF0Q5FZ/view?usp=share_link "srun")
+Pretrained Weights for Super-Resolution model (SRUN): [SRUN Weights](https://drive.google.com/file/d/1jDtWT_fbT9O2xmU-Mb5ycEl6ARF0Q5FZ/view?usp=share_link "srun")
 
-Pretrained Weights for SORTN model (required to run the code): ![SORTN Weights](https://drive.google.com/file/d/15ImRmGoORsCLSIy4tMJxtbH9NXLXGvVV/view?usp=share_link "sortn") 
+Pretrained Weights for SORTN model (required to run the code): [SORTN Weights](https://drive.google.com/file/d/15ImRmGoORsCLSIy4tMJxtbH9NXLXGvVV/view?usp=share_link "sortn") 
 
 ## Train
 **Command**:
@@ -90,5 +90,5 @@ $$\mathcal{L}_{SORTN} = \mathcal{L}_{cGAN} + \{100} \mathcal{L}_{1}$$
 
 ## References:
 
-OGSRN Paper - [link](https://www.sciencedirect.com/science/article/pii/S1000936121003459)
+OGSRN: Optical-guided super-resolution network for SAR image (2022) - [link](https://www.sciencedirect.com/science/article/pii/S1000936121003459)
 

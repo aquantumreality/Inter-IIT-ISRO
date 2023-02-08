@@ -94,6 +94,16 @@ $$\mathcal{L}_{SORTN} = \mathcal{L}_{cGAN} + \{100} \mathcal{L}_{1}$$
 
 (the second term represents the L1-loss between optical ground truth and optical generated images)
 
+# Task 2
+Using the OGSRN model, we are able to make 400x400 patches into 6400x6400 patches without loss of resolution. Using this we have written a script that will take the image, split it up into 400x400 tiles, and super resolve them.
+
+However, we were unable to completely get a TMC mapping of the lunar surface. The data was not overlapping, and despite downloading more than 300gb of TMC data, the images were staggered with considerable gaps between them, which is understandable considering the gap in time between successive exposures. We have attached a portion of the raster file for your reference.
+
+We have taken patches from NASA's LRO orbiter that was available in public-domain, and have super resolved them, and attached it for your perusal.
+
+Drive Link: [link](https://drive.google.com/drive/folders/1nQu0MQKTxLMYdhEf1dvx1tSTZPjtJN4W?usp=sharing)
+
+
 ## References:
 
 OGSRN: Optical-guided super-resolution network for SAR image (2022) - [link](https://www.sciencedirect.com/science/article/pii/S1000936121003459)

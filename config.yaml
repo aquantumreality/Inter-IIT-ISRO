@@ -22,7 +22,7 @@ INFERENCE_SAVE_DIR: 'Inference_Output'  # Generated images are in png format
 INFERENCE:
     PATCH_SIZE: 400
     
-BEST_CKPT: 'Epoch_118.pth'
+BEST_CKPT: 'SRUN_best_ckpt.pth'
 PRETRAINED_SORTN: 'best_ckpt_SORTN.pth'
 
 TRAIN:

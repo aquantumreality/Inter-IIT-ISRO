@@ -1,0 +1,34 @@
+# Paths need to be changed
+
+DATASET_PATH: "lunar_dataset"
+
+INFERENCE_SAR_PATH: 'Inference_Images/inference_sar.npy'   # needed if inference is required
+INFERENCE_SAVE_PATH: 'Inference_Images/optic_generated.png'
+
+DATASET:
+    HORIZONTAL_FLIP_PROB: 0.5
+    VERTICAL_FLIP_PROB: 0.5
+    
+DEVICE: 'cuda'
+
+RESULT_DIRS:
+    WEIGHTS: 'Gen_Disc_Weights'
+    GENERATED_IMAGES: 'Generated_Images'
+    LOSSES: 'Losses'
+    ACCURACIES: 'Accuracies'
+    
+BEST_CKPT: 'Gen_Disc_Weights/best_ckpt.pth'
+
+TRAIN:
+    NUM_EPOCHS: 200
+    START_FROM_PRETRAINED_WEIGHTS: True
+    PRETRAINED_WEIGHTS: 'Gen_Disc_Weights/Epoch24.pth'
+    
+    TRAIN_TEST_SPLIT: 0.8            # Ratio of train dataset to the whole dataset 
+    BATCH_SIZE: 10                    # Need to test other batch sizes
+    
+    INITIAL_LR: 0.0002
+    BETA_1: 0.5
+    BETA_2: 0.99
+    L1_LOSS_WEIGHT: 100
+    SAVING_AFTER_EPOCHS: 2           # Saves the model every 2 epochs

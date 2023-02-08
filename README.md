@@ -1,4 +1,4 @@
-# SAR-Super-resolution-v1
+# TMC-Super-resolution
 
 Weights for SORTN model (required to run the code) can be downloaded from the following S3 URI link. 
 

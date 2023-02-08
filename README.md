@@ -13,6 +13,9 @@
 - [Loss Functions](#loss-functions)
 - [References](#references)
 
+[Part 2: Global Lunar Atlas]
+
+
 ## Pretrained Weights:
 
 Pretrained Weights for Super-Resolution model (SRUN): [SRUN Weights](https://drive.google.com/file/d/1jDtWT_fbT9O2xmU-Mb5ycEl6ARF0Q5FZ/view?usp=share_link "srun")

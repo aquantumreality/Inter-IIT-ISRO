@@ -11,6 +11,7 @@
 - [Validation](#validation)
 - [Test/Inference](#test-inference)
 - [Loss Functions](#loss-functions)
+- [References](#references)
 
 ## Pretrained Weights:
 

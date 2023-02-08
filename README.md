@@ -6,11 +6,11 @@
 ## Table of Contents
 
 [Part 1: TMC Super Resolution](#tmc-super-res)
-- [Pretrained Weights](#Pipelines)
-- [Train](#Models)
-- [Validation](#leveraging-data)
-- [Test/Inference](#inference-time)
-- [Loss Functions](loss-functions)
+- [Pretrained Weights](#pretrained-weights)
+- [Train](#train)
+- [Validation](#validation)
+- [Test/Inference](#test-inference)
+- [Loss Functions](#loss-functions)
 
 ## Pretrained Weights:
 

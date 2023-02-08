@@ -3,9 +3,20 @@
 ![](assets/sample1.png)
 ![](assets/sample2.png)
 
-Pretrained Weights for Super-Resolution model (SRUN): (https://drive.google.com/file/d/1jDtWT_fbT9O2xmU-Mb5ycEl6ARF0Q5FZ/view?usp=share_link).
+## Table of Contents
 
-Pretrained Weights for SORTN model (required to run the code): (https://drive.google.com/file/d/15ImRmGoORsCLSIy4tMJxtbH9NXLXGvVV/view?usp=share_link). 
+[Part 1: TMC Super Resolution](#tmc-super-res)
+- [Pretrained Weights](#Pipelines)
+- [Train](#Models)
+- [Validation](#leveraging-data)
+- [Test/Inference](#inference-time)
+- [Loss Functions](loss-functions)
+
+## Pretrained Weights:
+
+Pretrained Weights for Super-Resolution model (SRUN): ![SRUN Weights](https://drive.google.com/file/d/1jDtWT_fbT9O2xmU-Mb5ycEl6ARF0Q5FZ/view?usp=share_link "srun")
+
+Pretrained Weights for SORTN model (required to run the code): ![SORTN Weights](https://drive.google.com/file/d/15ImRmGoORsCLSIy4tMJxtbH9NXLXGvVV/view?usp=share_link "sortn") 
 
 ## Train
 **Command**:
@@ -62,8 +73,10 @@ This notebook contains the same commands required for validation and inference.
 * The model is trained on around 18000 TMC-ortho pairs of patches. Patch size is 400x400.
 * Model: SORTN (Present in next branch) is the generator using to obtain the ortho-derived image from TMC.
 * SRUN: Responsible for super-resolving the TMC image, the architecture is similar to U-Net along with spatial attention modules. 
+* For inference, preprocessing involving clipping, despeckling, adaptive histogram scaling, minmax scaling between -1 to 1 and cropping to required patches is done. The patches are super-resolved and later stitched together. The steps can be visualized in the Test_Sentinel jupyter notebook.
+* The loss functions we used are as described below. 
 
-### Loss Functions:
+## Loss Functions:
 - **SRUN Loss**: 
 
 $$\mathcal{L}_{SRUN} = \mathcal{L}_{content} + \{0.1} \mathcal{L}_{evaluation}$$ 
@@ -74,4 +87,4 @@ $$\mathcal{L}_{SORTN} = \mathcal{L}_{cGAN} + \{100} \mathcal{L}_{1}$$
 
 (the second term represents the L1-loss between optical ground truth and optical generated images)
 
-* For inference, preprocessing involving clipping, despeckling, adaptive histogram scaling, minmax scaling between -1 to 1 and cropping to required patches is done. The patches are super-resolved and later stitched together. The steps can be visualized in the Test_Sentinel jupyter notebook.
+

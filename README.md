@@ -6,11 +6,11 @@ Pretrained Weights for SORTN model (required to run the code): (https://drive.go
 
 ## Table of Contents
 
-- [Part 1: TMC Super Resolution](#tmc-super-resolution)
-- [](#Pipelines)
-- [Models](#Models)
-- [Leveraging-data](#leveraging-data)
-- [Inference Time](#inference-time)
+[Part 1: TMC Super Resolution](#tmc-super-resolution)
+- [Solution Development](#solution-development)
+- [Loss Functions](#loss-function)
+- [Commands](#leveraging-data)
+- [Results](#results)
 - [Hyperparameters](#Hyperparameters)
 - [Possible Future Work](#possible-future-work)
 
@@ -21,7 +21,7 @@ Pretrained Weights for SORTN model (required to run the code): (https://drive.go
 * Model: SORTN (Present in next branch) is the generator using to obtain the ortho-derived image from TMC.
 * SRUN: Responsible for super-resolving the TMC image, the architecture is similar to U-Net along with spatial attention modules. 
 
-### Loss Functions:
+## Loss Functions:
 - **SRUN Loss**: 
 
 $$\mathcal{L}_{SRUN} = \mathcal{L}_{content} + \{0.1} \mathcal{L}_{evaluation}$$ 
@@ -34,6 +34,7 @@ $$\mathcal{L}_{SORTN} = \mathcal{L}_{cGAN} + \{100} \mathcal{L}_{1}$$
 
 * For inference, preprocessing involving clipping, despeckling, adaptive histogram scaling, minmax scaling between -1 to 1 and cropping to required patches is done. The patches are super-resolved and later stitched together. The steps can be visualized in the Test_Sentinel jupyter notebook.
 
+## Commands
 ### Train
 **Command**:
 ```bash
@@ -77,24 +78,6 @@ Before running the code, the directory to input TMC images must be given (Infere
 
 ## Super_Resolution_Demo jupyter notebook
 This notebook contains the same commands required for validation and inference.
-
-## Solution Development
-* The model is trained on around 18000 TMC-ortho pairs of patches. Patch size is 400x400.
-* Model: SORTN (Present in next branch) is the generator using to obtain the ortho-derived image from TMC.
-* SRUN: Responsible for super-resolving the TMC image, the architecture is similar to U-Net along with spatial attention modules. 
-
-### Loss Functions:
-- **SRUN Loss**: 
-
-$$\mathcal{L}_{SRUN} = \mathcal{L}_{content} + \{0.1} \mathcal{L}_{evaluation}$$ 
-
-- **SORTN Loss**:
-
-$$\mathcal{L}_{SORTN} = \mathcal{L}_{cGAN} + \{100} \mathcal{L}_{1}$$ 
-
-(the second term represents the L1-loss between optical ground truth and optical generated images)
-
-* For inference, preprocessing involving clipping, despeckling, adaptive histogram scaling, minmax scaling between -1 to 1 and cropping to required patches is done. The patches are super-resolved and later stitched together. The steps can be visualized in the Test_Sentinel jupyter notebook.
 
 
 ## Results

@@ -1,10 +1,40 @@
-# TMC-Super-resolution
+# Team 13 - ISRO Moon Mapping Challenge, Inter IIT Tech Meet 11.0 (Team ID - 13, Secondary ID - 26)
 
 Pretrained Weights for Super-Resolution model (SRUN): (https://drive.google.com/file/d/1jDtWT_fbT9O2xmU-Mb5ycEl6ARF0Q5FZ/view?usp=share_link).
 
 Pretrained Weights for SORTN model (required to run the code): (https://drive.google.com/file/d/15ImRmGoORsCLSIy4tMJxtbH9NXLXGvVV/view?usp=share_link). 
 
-## Train
+## Table of Contents
+
+- [Part 1: TMC Super Resolution](#tmc-super-resolution)
+- [](#Pipelines)
+- [Models](#Models)
+- [Leveraging-data](#leveraging-data)
+- [Inference Time](#inference-time)
+- [Hyperparameters](#Hyperparameters)
+- [Possible Future Work](#possible-future-work)
+
+# Part 1: TMC Super Resolution
+
+## Solution Development
+* The model is trained on around 18000 TMC-ortho pairs of patches. Patch size is 400x400.
+* Model: SORTN (Present in next branch) is the generator using to obtain the ortho-derived image from TMC.
+* SRUN: Responsible for super-resolving the TMC image, the architecture is similar to U-Net along with spatial attention modules. 
+
+### Loss Functions:
+- **SRUN Loss**: 
+
+$$\mathcal{L}_{SRUN} = \mathcal{L}_{content} + \{0.1} \mathcal{L}_{evaluation}$$ 
+
+- **SORTN Loss**:
+
+$$\mathcal{L}_{SORTN} = \mathcal{L}_{cGAN} + \{100} \mathcal{L}_{1}$$ 
+
+(the second term represents the L1-loss between optical ground truth and optical generated images)
+
+* For inference, preprocessing involving clipping, despeckling, adaptive histogram scaling, minmax scaling between -1 to 1 and cropping to required patches is done. The patches are super-resolved and later stitched together. The steps can be visualized in the Test_Sentinel jupyter notebook.
+
+### Train
 **Command**:
 ```bash
 gdown --no-cookies 1oa8qAHleja_HelWXiq24Ombf0UkFSMcB
@@ -19,7 +49,7 @@ Installs the required libraries from requirements.txt and runs the train script.
 
 Before running the code, respective directories for the dataset and the directories where the results are to be stored must be given in the config.yaml file. New folders will be created for result directories already if they are not present.
 
-## Validation
+### Validation
 **Command**:
 ```bash
 gdown --no-cookies 1vWCmwifFBENYm5LrrjJen9aJM4-fcJO4
@@ -33,7 +63,7 @@ Downloads the dataset required to perform validation. The data is curated from [
 
 Before running the code, the directory to the input validation dataset must be given. Please make sure that the TMC images given are in jpeg format.
 
-## Test/Inference
+### Test/Inference
 
 **Command**:
 

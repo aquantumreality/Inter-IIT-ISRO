@@ -9,7 +9,7 @@ Pretrained Weights for SORTN model (required to run the code): (https://drive.go
 [Part 1: TMC Super Resolution](#tmc-super-resolution)
 - [Solution Development](#solution-development)
 - [Loss Functions](#loss-function)
-- [Commands](#leveraging-data)
+- [Executing the code](#executing-the-code)
 - [Results](#results)
 - [Hyperparameters](#Hyperparameters)
 - [Possible Future Work](#possible-future-work)

@@ -1,6 +1,6 @@
 # Paths need to be changed
 
-DATASET_PATH: "/home/manoj/ISRO_Lunar_New/patches"
+DATASET_PATH: "/home/manoj/ISRO_Lunar_New/validation_patches"
 SCALE_RATIO: 4
 FINAL_RESOLUTION: 16
 INITIAL_SIZE: [400,400]

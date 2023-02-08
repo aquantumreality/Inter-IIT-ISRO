@@ -31,6 +31,8 @@ pip3 install -r requirements.txt
 
 ./run_script.sh train
 ```
+Train Dataset - [train](https://drive.google.com/file/d/1oa8qAHleja_HelWXiq24Ombf0UkFSMcB/view?usp=share_link)
+
 Downloads the dataset required to perform the training. The data is curated from [browse_derived.zip](https://pradan.issdc.gov.in/ch2/protected/downloadFile/tmc2/browse_derived.zip) from Pradan, ISRO. The method uses both DTM and ortho-derived TMC images for training.
 
 Installs the required libraries from requirements.txt and runs the train script.
@@ -44,6 +46,7 @@ Before running the code, respective directories for the dataset and the director
 | 4x | 28.26 | 0.790 |
 | 16x | 22.21 | 0.702 |
 
+Validation Dataset - [val](https://drive.google.com/file/d/1vWCmwifFBENYm5LrrjJen9aJM4-fcJO4/view?usp=share_link)
 
 **Command**:
 ```bash

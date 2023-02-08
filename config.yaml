@@ -1,6 +1,6 @@
 # Paths need to be changed
 
-DATASET_PATH: "/home/manoj/ISRO_Lunar_New/validation_patches"
+DATASET_PATH: "validation_patches"
 SCALE_RATIO: 4
 FINAL_RESOLUTION: 16
 INITIAL_SIZE: [400,400]
@@ -31,7 +31,7 @@ TRAIN:
     PRETRAINED_WEIGHTS: 'SRUN_best_ckpt.pth'
     
     TRAIN_TEST_SPLIT: 0.9            # Ratio of train dataset to the whole dataset 
-    BATCH_SIZE: 1                    # Need to test other batch sizes
+    BATCH_SIZE: 5                    # Need to test other batch sizes
     
     INITIAL_LR: 0.0001
     EVAL_LOSS_WEIGHT: 0.1

@@ -1,6 +1,6 @@
 # Team 13 - ISRO Moon Mapping Challenge, Inter IIT Tech Meet 11.0 (Team ID - 13, Secondary ID - 26)
 
-## Update: We won a Bronze Medal!
+## Update: We won a Bronze Medal! Special Thanks to Manoj hard carrying us!
 ![](assets/sample1.png)
 ![](assets/sample2.png)
 
